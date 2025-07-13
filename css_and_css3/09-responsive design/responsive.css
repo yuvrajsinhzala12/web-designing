@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+header,
+footer {
+    background: grey;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.content {
+    background: lightblue;
+    padding: 10px;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+
+}
+
+section {
+    padding: 15px;
+    margin: 15px;
+    font-size: 18px;
+}
+
+@media(max-width:768px) {
+   .main{ 
+    display: flex;
+    flex-direction: column;
+   }
+   section {
+    padding: 10px;
+    margin: 8px;
+    font-size: 16px;
+}
+}

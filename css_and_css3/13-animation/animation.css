@@ -1,0 +1,24 @@
+.main
+{
+    width: 250px;
+    height: 250px;
+    
+    animation: xyz 2s alternate linear infinite ;
+    
+}
+
+@keyframes xyz
+{
+    0%{
+        background-color:#000;
+    }
+    50%{
+      background: rgb(107, 66, 107);  
+    }
+    100%
+    {
+        background: navy;
+        margin-left: 250px;
+        border-radius: 50%;
+    }
+}

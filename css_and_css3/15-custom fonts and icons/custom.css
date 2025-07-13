@@ -1,0 +1,59 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-align: center;
+}
+
+header,footer,.row
+{
+    width: 100%;
+    font-family: "Montserrat", serif;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+header
+{   
+    height:200px;
+    background:rgb(160, 157, 107);
+}
+
+header p,footer p
+{
+    font-size:25px;
+}
+
+main
+{
+    height:305px;
+    background: rgb(130, 117, 86);
+}
+
+.row
+{
+    gap:20px;
+    height: 100%;
+}
+
+.col p
+{
+    font-size:20px;
+}
+
+
+footer
+{
+    height:224px;
+    background:rgb(171, 167, 167);
+    color: #fff;
+}
+
+i
+{
+    font-size:60px;
+    padding:20px;
+}

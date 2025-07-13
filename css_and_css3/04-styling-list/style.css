@@ -1,0 +1,40 @@
+*
+{
+  list-style-type: none;
+}
+
+ol li::before
+{
+  content:"\00BB";
+}
+
+
+
+
+ul li::before
+{
+  content:"\21A3";
+}
+
+
+
+
+ol li, ul li
+{
+  font-family:"Montserrat", serif ;
+  font-size: 30px;
+  font-style: italic;
+}
+
+ol li
+{
+  color: rgb(255, 153, 0);  
+}
+
+ul li
+{
+  color: rgb(58, 0, 139);
+}
+
+
+

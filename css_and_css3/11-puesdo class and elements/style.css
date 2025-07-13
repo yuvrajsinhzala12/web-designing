@@ -1,0 +1,31 @@
+a
+{
+    display: block;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color:#000;
+}
+
+a:visited
+{
+    color: orangered;
+}
+
+a:active
+{
+    color: green;
+
+}
+
+p::first-line
+{
+    color: darkmagenta;
+}
+
+h1::before
+{
+    content: "\2605";
+}

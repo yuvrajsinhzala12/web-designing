@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    max-width: 500px;
+    margin: 20vh auto;
+    padding:30px;
+}
+
+div h1
+{
+    text-align: center;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+input,textarea
+{
+    background: rgba(239, 237, 237, 0.83);
+}
+
+input,textarea,button
+{
+    padding:10px;
+    margin:10px 0;
+}
+
+button
+{
+    color: #fff;
+    background: #000;
+    border-radius:5px;
+}
+button:hover{
+    border: none;
+    background:rgb(201, 190, 190);
+}
+
+input:focus,textarea:focus
+{
+    background:rgb(201, 190, 190);
+}
