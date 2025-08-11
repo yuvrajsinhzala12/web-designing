@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header,
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .header {
+            justify-content: space-between;
+            padding: 15px 100px;
+            position: relative;
+            background: lightgrey;
+        }
+
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            background: lightgrey;
+            padding: 10px 0px;
+            gap: 20px;
+            display: none;
+        }
+
+        ul {
+            gap: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .navbar-mobile {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-mobile {
+                display: block;
+            }
+
+            .navbar-desktop {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+                position: absolute;
+                text-align: center;
+                background: lightgrey;
+                transform: translatex(-100%);
+                transition: 1s;
+            }
+
+            .mobile-menu.active {
+                transform: translatex(0%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+
+        <div class="logo">
+            <a href="">Company Name</a>
+        </div>
+
+        <div class="navbar-desktop">
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Sevrices</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div class="navbar-mobile" onclick="showmenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+        <ul class="mobile-menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Sevrices</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+    </div>
+
+
+    <script>
+
+        function showmenu() {
+
+            document.querySelector('.mobile-menu').classList.toggle('active');
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
