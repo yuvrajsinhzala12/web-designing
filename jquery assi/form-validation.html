@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        h1{
+            padding-top: 5px;
+            text-align: center;
+        }
+        form {
+            border-radius: 10px;
+            box-shadow: 5px 10px 15px rgb(57, 57, 57);
+            text-align: center;
+            padding: 50px 100px;
+            width: 700px;
+            margin: 50px auto;
+            background: linear-gradient(rgb(216, 205, 205),rgb(214, 163, 163));
+        }
+
+        input {
+            margin: 15px 16px;
+            padding: 5px 20px 5px 5px;
+        }
+
+        p {
+            margin: 0px;
+            color: red;
+            display: none;
+        }
+        .in-submit{
+            padding: 5px 20px;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+     <form onsubmit="return validation()">
+
+        <label for="Name">Name :</label>
+        <input type="text" class="inputfield" placeholder="Enter Your Name Here">
+        <p class="warning">*Field is Empty</p><br>
+
+        <label for="Email">Email :</label>
+        <input type="email" class="inputfield" placeholder="Enter Your Email Here">
+        <p class="warning">*Field is Empty</p><br>
+
+        <label for="numbver">Number :</label>
+        <input type="text" pattern="[0-9]+" class="inputfield" placeholder="Enter Your Number Here">
+        <p class="warning">*Field is Empty</p><br>
+
+
+        <label for="numbver">Message :</label>
+        <input type="" class="inputfield" placeholder="Write Your Message">
+        <p class="warning">*Field is Empty</p><br>
+
+        <input class="in-submit" type="submit">
+
+    </form>
+    <script>
+
+        let inputValue = $('.inputfield');
+        let warning = $('.warning');
+
+        
+
+        function validation(){
+
+            let valid = true;
+
+                for(i=0; i<inputValue.length; i++){
+
+                if($(inputValue[i]).val() === ""){
+
+                        $(warning[i]).css('display','block');
+                        valid = false;
+                    }
+
+
+                else{
+                        $(warning[i]).css('display','none');
+                }
+                
+            }  
+
+                return valid;
+        }
+
+        
+
+
+    </script>
+
+</body>
+</html>
